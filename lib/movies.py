@@ -17,7 +17,7 @@ def get_movie_choice(movie_name):
 	links = []
 
 	for index,tag in enumerate(lists):
-	    print(index+1,tag.get("title"))
+	    print("\t ",index+1,tag.get("title"))
 	    links.append(tag.get("href"))###movies name prints
     
 
@@ -46,7 +46,7 @@ def start_downloading(movie_url):
 
 
 def download_movie():
-	movie_name = input("enter movie name :\n")
+	movie_name = input("\t Please provide the movie name: ")
 	movie_url = get_movie_choice(movie_name)
 	print("\nStart download\n")
 	start_downloading(movie_url)

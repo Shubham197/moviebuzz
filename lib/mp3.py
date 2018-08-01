@@ -8,7 +8,7 @@ context = ssl._create_unverified_context()
 req = urllib.request.Request("https://pagalworld.co/latest-bollywood-hindi-mp3-songs-2018/list.html"
                              ,headers={"User-Agent":"Mozilla/5.0"})
 
-res = urllib.request.urlopen(req)#,context=context)
+res = urllib.request.urlopen(req,context=context)
 data = res.read().decode("utf-8")
 
 soup = BeautifulSoup(data,"html.parser")
@@ -91,4 +91,4 @@ else :
         print("Download started")
         urllib.request.urlretrieve(link,links+".zip")
         print("Download end")
-input()
+# input()
